@@ -5,7 +5,8 @@
     display: flex;  /*all items will be in same raw */
     align-items: center;
     position: sticky;
-    top:0;  /* after that this container will stick to top zero */    
+    top:0;  /* after that this container will stick to top zero */   
+    z-index: 999; 
 }
 
 .topbarLeft{
