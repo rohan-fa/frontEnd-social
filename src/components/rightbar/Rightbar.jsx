@@ -1,5 +1,6 @@
 import './rightbar.css';
 import {Users} from '../../dummyData';
+import Online from '../online/Online';
 
 function Rightbar() {
   return (
@@ -13,7 +14,9 @@ function Rightbar() {
         <img className='rightbarAd' src="assests/ad.png" alt="" />
         <h4 className="rightbarTitle">Online Friends</h4>
         <ul className="rightbarFriendList">
-          {Users.map()} {/*for each user,im going to return online component and im going to pass this user */}
+          {Users.map(u => (
+            <Online key={u.id} user={u} />
+          ))} {/*for each user,im going to return online component and im going to pass this user */}
         </ul>
       </div>
     </div>
