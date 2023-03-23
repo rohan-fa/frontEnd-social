@@ -3,16 +3,17 @@ import {Users} from '../../dummyData';
 import Online from '../online/Online';
 
 function Rightbar({profile}) {
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER; 
   
   const HomeRightBar = () => {
     return (
       <>
       <div className="birthdayContainer">
-          <img className='birthdayImg' src="/assests/gift.png" alt="" />
+          <img className='birthdayImg' src={`${PF}gift.png`} alt='' />
           <span className="birthdayText">
             <b>Snow Zoey</b> and <b>3 other friends</b> have a birthday today</span>
         </div>
-        <img className='rightbarAd' src="assests/ad.png" alt="" />
+        <img className='rightbarAd' src={`${PF}ad.png" alt=""`}/>
         <h4 className="rightbarTitle">Online Friends</h4>
         <ul className="rightbarFriendList">
           {Users.map(u => (
@@ -23,7 +24,7 @@ function Rightbar({profile}) {
     )
   }
   const ProfileRightBar = () => {
-    return (
+  return (
       <>
       <h4 className='rightbarTitle' >User Information</h4>
       <div className="rightbarInfo">
@@ -43,25 +44,25 @@ function Rightbar({profile}) {
       <h4 className='rightbarTitle' >User Friends</h4>
       <div className="rightbarFollowings">
         <div className="rightbarFollowing">
-          <img src="assests/pictures/1.png" alt="" className="rightbarFollowingImg" />
+          <img src={`${PF}pictures/1.png`} alt="" className="rightbarFollowingImg" />
           <span className="rightbarFollowingName">Snowyyy</span>
         </div><div className="rightbarFollowing">
-          <img src="assests/pictures/2.png" alt="" className="rightbarFollowingImg" />
+          <img src={`${PF}pictures/2.png`} alt="" className="rightbarFollowingImg" />
           <span className="rightbarFollowingName">Snowyyy</span>
         </div><div className="rightbarFollowing">
-          <img src="assests/pictures/3.png" alt="" className="rightbarFollowingImg" />
+          <img src={`${PF}pictures/3.png`} alt="" className="rightbarFollowingImg" />
           <span className="rightbarFollowingName">Snowyyy</span>
         </div><div className="rightbarFollowing">
-          <img src="assests/pictures/4.png" alt="" className="rightbarFollowingImg" />
+          <img src={`${PF}pictures/4.png`} alt="" className="rightbarFollowingImg" />
           <span className="rightbarFollowingName">Snowyyy</span>
         </div><div className="rightbarFollowing">
-          <img src="assests/pictures/5.png" alt="" className="rightbarFollowingImg" />
+          <img src={`${PF}pictures/5.png`} alt="" className="rightbarFollowingImg" />
           <span className="rightbarFollowingName">Snowyyy</span>
         </div><div className="rightbarFollowing">
-          <img src="assests/pictures/6.png" alt="" className="rightbarFollowingImg" />
+          <img src={`${PF}pictures/6.png`} alt="" className="rightbarFollowingImg" />
           <span className="rightbarFollowingName">Snowyyy</span>
         </div><div className="rightbarFollowing">
-          <img src="assests/pictures/8.png" alt="" className="rightbarFollowingImg" />
+          <img src={`${PF}pictures/8.png`} alt="" className="rightbarFollowingImg" />
           <span className="rightbarFollowingName">Snowyyy</span>
         </div>
       </div>
